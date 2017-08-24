@@ -1,0 +1,98 @@
+c:\users\rodrigo\documents\visual studio 2012\Projects\videoTracker\videoTracker\bin\Debug\videoTracker.exe.config
+c:\users\rodrigo\documents\visual studio 2012\Projects\videoTracker\videoTracker\bin\Debug\videoTracker.exe
+c:\users\rodrigo\documents\visual studio 2012\Projects\videoTracker\videoTracker\bin\Debug\videoTracker.pdb
+c:\users\rodrigo\documents\visual studio 2012\Projects\videoTracker\videoTracker\bin\Debug\Interop.WMPLib.dll
+c:\users\rodrigo\documents\visual studio 2012\Projects\videoTracker\videoTracker\bin\Debug\AxInterop.WMPLib.dll
+c:\users\rodrigo\documents\visual studio 2012\Projects\videoTracker\videoTracker\obj\Debug\videoTracker.csprojResolveAssemblyReference.cache
+c:\users\rodrigo\documents\visual studio 2012\Projects\videoTracker\videoTracker\obj\Debug\Interop.WMPLib.dll
+c:\users\rodrigo\documents\visual studio 2012\Projects\videoTracker\videoTracker\obj\Debug\AxInterop.WMPLib.dll
+c:\users\rodrigo\documents\visual studio 2012\Projects\videoTracker\videoTracker\obj\Debug\videoTracker.csproj.ResolveComReference.cache
+c:\users\rodrigo\documents\visual studio 2012\Projects\videoTracker\videoTracker\obj\Debug\videoTracker.Form1.resources
+c:\users\rodrigo\documents\visual studio 2012\Projects\videoTracker\videoTracker\obj\Debug\videoTracker.Properties.Resources.resources
+c:\users\rodrigo\documents\visual studio 2012\Projects\videoTracker\videoTracker\obj\Debug\videoTracker.csproj.GenerateResource.Cache
+c:\users\rodrigo\documents\visual studio 2012\Projects\videoTracker\videoTracker\obj\Debug\videoTracker.exe
+c:\users\rodrigo\documents\visual studio 2012\Projects\videoTracker\videoTracker\obj\Debug\videoTracker.pdb
+C:\Users\rmaalmeida\Documents\Visual Studio 2012\Projects\videoTracker\videoTracker\obj\Debug\videoTracker.csprojResolveAssemblyReference.cache
+C:\Users\rmaalmeida\Documents\Visual Studio 2012\Projects\videoTracker\videoTracker\obj\Debug\videoTracker.exe
+C:\Users\rmaalmeida\Documents\Visual Studio 2012\Projects\videoTracker\videoTracker\obj\Debug\videoTracker.pdb
+C:\Users\rmaalmeida\Documents\Visual Studio 2012\Projects\videoTracker\videoTracker\bin\Debug\videoTracker.exe.config
+C:\Users\rmaalmeida\Documents\Visual Studio 2012\Projects\videoTracker\videoTracker\obj\Debug\Interop.WMPLib.dll
+C:\Users\rmaalmeida\Documents\Visual Studio 2012\Projects\videoTracker\videoTracker\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\rmaalmeida\Documents\Visual Studio 2012\Projects\videoTracker\videoTracker\obj\Debug\videoTracker.csproj.ResolveComReference.cache
+C:\Users\rmaalmeida\Documents\Visual Studio 2012\Projects\videoTracker\videoTracker\bin\Debug\videoTracker.exe
+C:\Users\rmaalmeida\Documents\Visual Studio 2012\Projects\videoTracker\videoTracker\bin\Debug\videoTracker.pdb
+C:\Users\rmaalmeida\Documents\Visual Studio 2012\Projects\videoTracker\videoTracker\bin\Debug\Interop.WMPLib.dll
+C:\Users\rmaalmeida\Documents\Visual Studio 2012\Projects\videoTracker\videoTracker\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\rmaalmeida\Documents\Visual Studio 2012\Projects\videoTracker\videoTracker\obj\Debug\videoTracker.Form1.resources
+C:\Users\rmaalmeida\Documents\Visual Studio 2012\Projects\videoTracker\videoTracker\obj\Debug\videoTracker.Properties.Resources.resources
+C:\Users\rmaalmeida\Documents\Visual Studio 2012\Projects\videoTracker\videoTracker\obj\Debug\videoTracker.csproj.GenerateResource.Cache
+C:\Users\Alysson Faria\Desktop\SMH Trauma Files - Confidential\videoTracker\videoTracker\bin\Debug\videoTracker.exe.config
+C:\Users\Alysson Faria\Desktop\SMH Trauma Files - Confidential\videoTracker\videoTracker\bin\Debug\videoTracker.exe
+C:\Users\Alysson Faria\Desktop\SMH Trauma Files - Confidential\videoTracker\videoTracker\bin\Debug\videoTracker.pdb
+C:\Users\Alysson Faria\Desktop\SMH Trauma Files - Confidential\videoTracker\videoTracker\bin\Debug\Interop.WMPLib.dll
+C:\Users\Alysson Faria\Desktop\SMH Trauma Files - Confidential\videoTracker\videoTracker\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Alysson Faria\Desktop\SMH Trauma Files - Confidential\videoTracker\videoTracker\obj\Debug\videoTracker.csprojResolveAssemblyReference.cache
+C:\Users\Alysson Faria\Desktop\SMH Trauma Files - Confidential\videoTracker\videoTracker\obj\Debug\Interop.WMPLib.dll
+C:\Users\Alysson Faria\Desktop\SMH Trauma Files - Confidential\videoTracker\videoTracker\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Alysson Faria\Desktop\SMH Trauma Files - Confidential\videoTracker\videoTracker\obj\Debug\videoTracker.csproj.ResolveComReference.cache
+C:\Users\Alysson Faria\Desktop\SMH Trauma Files - Confidential\videoTracker\videoTracker\obj\Debug\videoTracker.Form1.resources
+C:\Users\Alysson Faria\Desktop\SMH Trauma Files - Confidential\videoTracker\videoTracker\obj\Debug\videoTracker.Properties.Resources.resources
+C:\Users\Alysson Faria\Desktop\SMH Trauma Files - Confidential\videoTracker\videoTracker\obj\Debug\videoTracker.csproj.GenerateResource.Cache
+C:\Users\Alysson Faria\Desktop\SMH Trauma Files - Confidential\videoTracker\videoTracker\obj\Debug\videoTracker.exe
+C:\Users\Alysson Faria\Desktop\SMH Trauma Files - Confidential\videoTracker\videoTracker\obj\Debug\videoTracker.pdb
+C:\Users\Alysson Faria\Desktop\SMH Trauma Files - Confidential\videoTracker\videoTracker\obj\Debug\videoTracker.MsgBox.resources
+C:\Users\Guilherme Donda\Desktop\SMH Trauma Files - Confidential\videoTracker\videoTracker\bin\Debug\videoTracker.exe.config
+C:\Users\Guilherme Donda\Desktop\SMH Trauma Files - Confidential\videoTracker\videoTracker\bin\Debug\videoTracker.exe
+C:\Users\Guilherme Donda\Desktop\SMH Trauma Files - Confidential\videoTracker\videoTracker\bin\Debug\videoTracker.pdb
+C:\Users\Guilherme Donda\Desktop\SMH Trauma Files - Confidential\videoTracker\videoTracker\bin\Debug\Interop.WMPLib.dll
+C:\Users\Guilherme Donda\Desktop\SMH Trauma Files - Confidential\videoTracker\videoTracker\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Guilherme Donda\Desktop\SMH Trauma Files - Confidential\videoTracker\videoTracker\obj\Debug\videoTracker.csprojResolveAssemblyReference.cache
+C:\Users\Guilherme Donda\Desktop\SMH Trauma Files - Confidential\videoTracker\videoTracker\obj\Debug\Interop.WMPLib.dll
+C:\Users\Guilherme Donda\Desktop\SMH Trauma Files - Confidential\videoTracker\videoTracker\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Guilherme Donda\Desktop\SMH Trauma Files - Confidential\videoTracker\videoTracker\obj\Debug\videoTracker.csproj.ResolveComReference.cache
+C:\Users\Guilherme Donda\Desktop\SMH Trauma Files - Confidential\videoTracker\videoTracker\obj\Debug\videoTracker.Form1.resources
+C:\Users\Guilherme Donda\Desktop\SMH Trauma Files - Confidential\videoTracker\videoTracker\obj\Debug\videoTracker.MsgBox.resources
+C:\Users\Guilherme Donda\Desktop\SMH Trauma Files - Confidential\videoTracker\videoTracker\obj\Debug\videoTracker.Properties.Resources.resources
+C:\Users\Guilherme Donda\Desktop\SMH Trauma Files - Confidential\videoTracker\videoTracker\obj\Debug\videoTracker.csproj.GenerateResource.Cache
+C:\Users\Guilherme Donda\Desktop\SMH Trauma Files - Confidential\videoTracker\videoTracker\obj\Debug\videoTracker.exe
+C:\Users\Guilherme Donda\Desktop\SMH Trauma Files - Confidential\videoTracker\videoTracker\obj\Debug\videoTracker.pdb
+C:\Users\Guilherme Donda\Desktop\SMH Trauma Files - Confidential\videoTracker\videoTracker\obj\Debug\videoTracker.MsgBoxVideo.resources
+C:\Users\Guilherme Donda\Desktop\SMH Trauma Files - Confidential\videoTracker\videoTracker\obj\Debug\videoTracker.MsgBoxTrack.resources
+C:\Users\Alysson Faria\Desktop\videoTracker\videoTracker\bin\Debug\videoTracker.exe.config
+C:\Users\Alysson Faria\Desktop\videoTracker\videoTracker\bin\Debug\videoTracker.exe
+C:\Users\Alysson Faria\Desktop\videoTracker\videoTracker\bin\Debug\videoTracker.pdb
+C:\Users\Alysson Faria\Desktop\videoTracker\videoTracker\bin\Debug\Interop.WMPLib.dll
+C:\Users\Alysson Faria\Desktop\videoTracker\videoTracker\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Alysson Faria\Desktop\videoTracker\videoTracker\obj\Debug\videoTracker.csprojResolveAssemblyReference.cache
+C:\Users\Alysson Faria\Desktop\videoTracker\videoTracker\obj\Debug\Interop.WMPLib.dll
+C:\Users\Alysson Faria\Desktop\videoTracker\videoTracker\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Alysson Faria\Desktop\videoTracker\videoTracker\obj\Debug\videoTracker.csproj.ResolveComReference.cache
+C:\Users\Alysson Faria\Desktop\videoTracker\videoTracker\obj\Debug\videoTracker.Form1.resources
+C:\Users\Alysson Faria\Desktop\videoTracker\videoTracker\obj\Debug\videoTracker.MsgBox.resources
+C:\Users\Alysson Faria\Desktop\videoTracker\videoTracker\obj\Debug\videoTracker.MsgBoxTrack.resources
+C:\Users\Alysson Faria\Desktop\videoTracker\videoTracker\obj\Debug\videoTracker.MsgBoxVideo.resources
+C:\Users\Alysson Faria\Desktop\videoTracker\videoTracker\obj\Debug\videoTracker.Properties.Resources.resources
+C:\Users\Alysson Faria\Desktop\videoTracker\videoTracker\obj\Debug\videoTracker.csproj.GenerateResource.Cache
+C:\Users\Alysson Faria\Desktop\videoTracker\videoTracker\obj\Debug\videoTracker.exe
+C:\Users\Alysson Faria\Desktop\videoTracker\videoTracker\obj\Debug\videoTracker.pdb
+C:\Users\Guilherme Donda\Desktop\SMH Trauma Files - Confidential\videoTracker\videoTracker\obj\Debug\videoTracker.MsgBoxTrackEmpty.resources
+C:\Users\Guilherme Donda\Desktop\SMH Trauma Files - Confidential\videoTracker\videoTracker\obj\Debug\videoTracker.MsgBoxQuit.resources
+C:\Users\Avell\Documents\videoTracker\videoTracker\bin\Debug\videoTracker.exe.config
+C:\Users\Avell\Documents\videoTracker\videoTracker\obj\Debug\Interop.WMPLib.dll
+C:\Users\Avell\Documents\videoTracker\videoTracker\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Avell\Documents\videoTracker\videoTracker\obj\Debug\videoTracker.csproj.ResolveComReference.cache
+C:\Users\Avell\Documents\videoTracker\videoTracker\obj\Debug\videoTracker.exe
+C:\Users\Avell\Documents\videoTracker\videoTracker\obj\Debug\videoTracker.pdb
+C:\Users\Avell\Documents\videoTracker\videoTracker\bin\Debug\videoTracker.exe
+C:\Users\Avell\Documents\videoTracker\videoTracker\bin\Debug\videoTracker.pdb
+C:\Users\Avell\Documents\videoTracker\videoTracker\bin\Debug\Interop.WMPLib.dll
+C:\Users\Avell\Documents\videoTracker\videoTracker\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Avell\Documents\videoTracker\videoTracker\obj\Debug\videoTracker.csprojResolveAssemblyReference.cache
+C:\Users\Avell\Documents\videoTracker\videoTracker\obj\Debug\videoTracker.Form1.resources
+C:\Users\Avell\Documents\videoTracker\videoTracker\obj\Debug\videoTracker.MsgBox.resources
+C:\Users\Avell\Documents\videoTracker\videoTracker\obj\Debug\videoTracker.MsgBoxQuit.resources
+C:\Users\Avell\Documents\videoTracker\videoTracker\obj\Debug\videoTracker.MsgBoxTrack.resources
+C:\Users\Avell\Documents\videoTracker\videoTracker\obj\Debug\videoTracker.MsgBoxTrackEmpty.resources
+C:\Users\Avell\Documents\videoTracker\videoTracker\obj\Debug\videoTracker.MsgBoxVideo.resources
+C:\Users\Avell\Documents\videoTracker\videoTracker\obj\Debug\videoTracker.Properties.Resources.resources
+C:\Users\Avell\Documents\videoTracker\videoTracker\obj\Debug\videoTracker.csproj.GenerateResource.Cache

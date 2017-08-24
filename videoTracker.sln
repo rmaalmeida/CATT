@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "videoTracker", "videoTracker\videoTracker.csproj", "{378AD01A-BA5B-4DB4-B5A0-96E8CCF30FE4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{378AD01A-BA5B-4DB4-B5A0-96E8CCF30FE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{378AD01A-BA5B-4DB4-B5A0-96E8CCF30FE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{378AD01A-BA5B-4DB4-B5A0-96E8CCF30FE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{378AD01A-BA5B-4DB4-B5A0-96E8CCF30FE4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
