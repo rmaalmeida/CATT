@@ -32,18 +32,25 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tracksList = new System.Windows.Forms.ListBox();
             this.tick = new System.Windows.Forms.Timer(this.components);
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btLoad = new System.Windows.Forms.Button();
+            this.btHeat = new System.Windows.Forms.Button();
+            this.btSave = new System.Windows.Forms.Button();
+            this.btAnimate = new System.Windows.Forms.Button();
             this.mplayer = new AxWMPLib.AxWindowsMediaPlayer();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btAnimateAll = new System.Windows.Forms.Button();
+            this.btClean = new System.Windows.Forms.Button();
+            this.btCalc = new System.Windows.Forms.Button();
+            this.btDeleteTrack = new System.Windows.Forms.Button();
+            this.btDraw = new System.Windows.Forms.Button();
+            this.blLoadVideo = new System.Windows.Forms.Button();
+            this.speed = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.mplayer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.speed)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tracksList
@@ -52,9 +59,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tracksList.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.tracksList.FormattingEnabled = true;
-            this.tracksList.Location = new System.Drawing.Point(582, 350);
+            this.tracksList.Location = new System.Drawing.Point(657, 406);
             this.tracksList.Name = "tracksList";
-            this.tracksList.Size = new System.Drawing.Size(73, 212);
+            this.tracksList.Size = new System.Drawing.Size(110, 56);
             this.tracksList.TabIndex = 4;
             this.tracksList.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.tracksList_DrawItem);
             this.tracksList.SelectedIndexChanged += new System.EventHandler(this.tracksList_SelectedIndexChanged);
@@ -64,65 +71,49 @@
             // 
             this.tick.Tick += new System.EventHandler(this.tick_Tick);
             // 
-            // button2
+            // btLoad
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(582, 27);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(73, 23);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Load Track";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btLoad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btLoad.Location = new System.Drawing.Point(658, 70);
+            this.btLoad.Name = "btLoad";
+            this.btLoad.Size = new System.Drawing.Size(110, 27);
+            this.btLoad.TabIndex = 7;
+            this.btLoad.Text = "Load tracks from file";
+            this.btLoad.UseVisualStyleBackColor = true;
+            this.btLoad.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // btHeat
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(582, 52);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(73, 23);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Draw";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btHeat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btHeat.Location = new System.Drawing.Point(658, 99);
+            this.btHeat.Name = "btHeat";
+            this.btHeat.Size = new System.Drawing.Size(110, 40);
+            this.btHeat.TabIndex = 8;
+            this.btHeat.Text = "Heatmap (selected track)";
+            this.btHeat.UseVisualStyleBackColor = true;
+            this.btHeat.Click += new System.EventHandler(this.button3_Click);
             // 
-            // label1
+            // btSave
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(578, 204);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 143);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "z - Open Video\r\nx - Play Video\r\nc - Pause Video\r\nv - Stop Video\r\ns - New track\r\nd" +
-    " - Start tacking\r\nf - Stop tracking\r\ne - Start maping\r\nr - Stop maping\r\n\r\nCurren" +
-    "t tracks:";
+            this.btSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btSave.Location = new System.Drawing.Point(658, 41);
+            this.btSave.Name = "btSave";
+            this.btSave.Size = new System.Drawing.Size(110, 27);
+            this.btSave.TabIndex = 6;
+            this.btSave.Text = "Save tracks to file";
+            this.btSave.UseVisualStyleBackColor = true;
+            this.btSave.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button1
+            // btAnimate
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(582, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(73, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Save Track";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button4
-            // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Location = new System.Drawing.Point(582, 77);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(73, 23);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "Animate";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.btAnimate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btAnimate.Location = new System.Drawing.Point(658, 183);
+            this.btAnimate.Name = "btAnimate";
+            this.btAnimate.Size = new System.Drawing.Size(110, 40);
+            this.btAnimate.TabIndex = 10;
+            this.btAnimate.Text = "Animate\r\n(selected track)";
+            this.btAnimate.UseVisualStyleBackColor = true;
+            this.btAnimate.Click += new System.EventHandler(this.button4_Click);
             // 
             // mplayer
             // 
@@ -133,68 +124,154 @@
             this.mplayer.Location = new System.Drawing.Point(2, 2);
             this.mplayer.Name = "mplayer";
             this.mplayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("mplayer.OcxState")));
-            this.mplayer.Size = new System.Drawing.Size(574, 560);
+            this.mplayer.Size = new System.Drawing.Size(649, 615);
             this.mplayer.TabIndex = 0;
             this.mplayer.Enter += new System.EventHandler(this.mplayer_Enter);
             // 
-            // button5
+            // btAnimateAll
             // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.Location = new System.Drawing.Point(581, 102);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(73, 23);
-            this.button5.TabIndex = 11;
-            this.button5.Text = "Full Animate";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btAnimateAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btAnimateAll.Location = new System.Drawing.Point(658, 225);
+            this.btAnimateAll.Name = "btAnimateAll";
+            this.btAnimateAll.Size = new System.Drawing.Size(110, 27);
+            this.btAnimateAll.TabIndex = 11;
+            this.btAnimateAll.Text = "Animate all tracks";
+            this.btAnimateAll.UseVisualStyleBackColor = true;
+            this.btAnimateAll.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button6
+            // btClean
             // 
-            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button6.Location = new System.Drawing.Point(582, 152);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(73, 23);
-            this.button6.TabIndex = 12;
-            this.button6.Text = "Clean";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.btClean.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btClean.Location = new System.Drawing.Point(658, 296);
+            this.btClean.Name = "btClean";
+            this.btClean.Size = new System.Drawing.Size(110, 27);
+            this.btClean.TabIndex = 12;
+            this.btClean.Text = "Clean drawings";
+            this.btClean.UseVisualStyleBackColor = true;
+            this.btClean.Click += new System.EventHandler(this.button6_Click);
             // 
-            // button7
+            // btCalc
             // 
-            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button7.Location = new System.Drawing.Point(581, 127);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(73, 23);
-            this.button7.TabIndex = 12;
-            this.button7.Text = "Distance";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.btCalc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btCalc.Location = new System.Drawing.Point(658, 254);
+            this.btCalc.Name = "btCalc";
+            this.btCalc.Size = new System.Drawing.Size(110, 40);
+            this.btCalc.TabIndex = 12;
+            this.btCalc.Text = "Calc distance (selected track)";
+            this.btCalc.UseVisualStyleBackColor = true;
+            this.btCalc.Click += new System.EventHandler(this.button7_Click);
             // 
-            // button8
+            // btDeleteTrack
             // 
-            this.button8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button8.Location = new System.Drawing.Point(582, 177);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 11;
-            this.button8.Text = "Del Track";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.btDeleteTrack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btDeleteTrack.Location = new System.Drawing.Point(657, 325);
+            this.btDeleteTrack.Name = "btDeleteTrack";
+            this.btDeleteTrack.Size = new System.Drawing.Size(112, 27);
+            this.btDeleteTrack.TabIndex = 11;
+            this.btDeleteTrack.Text = "Delet selected track";
+            this.btDeleteTrack.UseVisualStyleBackColor = true;
+            this.btDeleteTrack.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // btDraw
+            // 
+            this.btDraw.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btDraw.Location = new System.Drawing.Point(658, 141);
+            this.btDraw.Name = "btDraw";
+            this.btDraw.Size = new System.Drawing.Size(110, 40);
+            this.btDraw.TabIndex = 8;
+            this.btDraw.Text = "Draw track (selected track)";
+            this.btDraw.UseVisualStyleBackColor = true;
+            this.btDraw.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // blLoadVideo
+            // 
+            this.blLoadVideo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.blLoadVideo.Location = new System.Drawing.Point(658, 12);
+            this.blLoadVideo.Name = "blLoadVideo";
+            this.blLoadVideo.Size = new System.Drawing.Size(110, 27);
+            this.blLoadVideo.TabIndex = 6;
+            this.blLoadVideo.Text = "Load new Video";
+            this.blLoadVideo.UseVisualStyleBackColor = true;
+            this.blLoadVideo.Click += new System.EventHandler(this.blLoadVideo_Click);
+            // 
+            // speed
+            // 
+            this.speed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.speed.Location = new System.Drawing.Point(657, 369);
+            this.speed.Name = "speed";
+            this.speed.Size = new System.Drawing.Size(110, 20);
+            this.speed.TabIndex = 13;
+            this.speed.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(655, 354);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(87, 13);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Animation Speed";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(655, 391);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(43, 13);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "Tracks:";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(82, 91);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "z - Open Video\r\nx - Play Video\r\nc - Pause Video\r\nv - Stop Video\r\ns - New track\r\nd" +
+    " - Start tacking\r\nf - Stop tracking";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(658, 481);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(110, 136);
+            this.groupBox1.TabIndex = 16;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Keyboard Commands";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(657, 562);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(769, 617);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.speed);
+            this.Controls.Add(this.btDeleteTrack);
+            this.Controls.Add(this.btCalc);
+            this.Controls.Add(this.btClean);
+            this.Controls.Add(this.btAnimateAll);
+            this.Controls.Add(this.btAnimate);
+            this.Controls.Add(this.btDraw);
+            this.Controls.Add(this.btHeat);
+            this.Controls.Add(this.btLoad);
+            this.Controls.Add(this.blLoadVideo);
+            this.Controls.Add(this.btSave);
             this.Controls.Add(this.tracksList);
             this.Controls.Add(this.mplayer);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -203,9 +280,13 @@
             this.Text = "VideoTracker";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.ResizeEnd += new System.EventHandler(this.Form1_ResizeEnd);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
             this.Resize += new System.EventHandler(this.Form1_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.mplayer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.speed)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -216,16 +297,21 @@
         private AxWMPLib.AxWindowsMediaPlayer mplayer;
         private System.Windows.Forms.ListBox tracksList;
         private System.Windows.Forms.Timer tick;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btLoad;
+        private System.Windows.Forms.Button btHeat;
+        private System.Windows.Forms.Button btSave;
+        private System.Windows.Forms.Button btAnimate;
+        private System.Windows.Forms.Button btAnimateAll;
+        private System.Windows.Forms.Button btClean;
+        private System.Windows.Forms.Button btCalc;
+        private System.Windows.Forms.Button btDeleteTrack;
+        private System.Windows.Forms.Button btDraw;
+        private System.Windows.Forms.Button blLoadVideo;
+        private System.Windows.Forms.NumericUpDown speed;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 
