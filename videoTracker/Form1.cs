@@ -78,7 +78,7 @@ namespace videoTracker
                     break;
                 case 'c':
                     // pause video
-                    //mplayer.Ctlcontrols.pause();
+                    mplayer.Ctlcontrols.pause();
                     break;
                 case 'v':
                     // stop video
@@ -193,6 +193,7 @@ namespace videoTracker
             {
                 mplayer.Ctlcontrols.pause();
                 getConversion();
+                FISRTLOAD = false;
             }
         }
 
