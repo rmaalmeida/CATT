@@ -206,7 +206,7 @@ namespace videoTracker
             tracklistExist = true;
 
             btAnimate.Enabled = true;
-            if (tracksList.Items.Count > 2)
+            if (tracksList.Items.Count >= 2)
             {
                 btAnimateAll.Enabled = true;
             }
@@ -343,10 +343,69 @@ namespace videoTracker
             }
         }
 
-        bool displayMap;
+        int displayMap;
 
         private void Form1_Resize(object sender, EventArgs e)
         {
+
+            if (displayMap == 1)
+            {
+                getConversion();
+                //-64 to remove control bar
+                Bitmap nb = new Bitmap(mplayer.Width - (int)(bw * 2), mplayer.Height - (int)(bh * 2) - 64);
+                drawHeatMap(nb, (track)tracksList.Items[tracksList.SelectedIndex]);
+
+
+                //transp form setup
+                Rectangle screenRectangle = RectangleToScreen(this.ClientRectangle);
+
+                int titleHeight = screenRectangle.Top - this.Top;
+                //sum 8 I simply dont know why, but it works
+                Point pt = new Point(this.Location.X + mplayer.Location.X + (int)bw + 8, this.Location.Y + mplayer.Location.Y + titleHeight + (int)bh);
+
+                transpImage.Location = pt;
+                transpImage.Size = mplayer.Size;
+                transpImage.SetBits(nb);
+            }
+            else if (displayMap == 2)
+            {
+                getConversion();
+                //-64 to remove control bar
+                Bitmap nb = new Bitmap(mplayer.Width - (int)(bw * 2), mplayer.Height - (int)(bh * 2) - 64);
+                drawTrack(nb, (track)tracksList.Items[tracksList.SelectedIndex]);
+
+
+                //transp form setup
+                Rectangle screenRectangle = RectangleToScreen(this.ClientRectangle);
+
+                int titleHeight = screenRectangle.Top - this.Top;
+                //sum 8 I simply dont know why, but it works
+                Point pt = new Point(this.Location.X + mplayer.Location.X + (int)bw + 8, this.Location.Y + mplayer.Location.Y + titleHeight + (int)bh);
+
+                transpImage.Location = pt;
+                transpImage.Size = mplayer.Size;
+                transpImage.SetBits(nb);
+            }
+            else
+            {
+                btClean.Enabled = false;
+                Bitmap nb = new Bitmap(1, 1);
+
+                //drawHeatMap(nb, (track)tracksList.Items[tracksList.SelectedIndex]);
+
+                Graphics g = Graphics.FromImage(nb);
+                g.Clear(Color.Transparent);
+                Rectangle screenRectangle = RectangleToScreen(this.ClientRectangle);
+
+                int titleHeight = screenRectangle.Top - this.Top;
+                //sum 8 I simply dont know why, but it works
+                Point pt = new Point(this.Location.X + mplayer.Location.X + (int)bw + 8, this.Location.Y + mplayer.Location.Y + titleHeight + (int)bh);
+
+                transpImage.Location = pt;
+                transpImage.Size = mplayer.Size;
+                transpImage.SetBits(nb);
+                displayMap = 0;
+            }
 
         }
 
@@ -419,7 +478,7 @@ namespace videoTracker
             else MsgBoxVideo.Show("Please, Load a Video Using 'z'", "Warning Message", "OK");
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void heatmap_Click(object sender, EventArgs e)
         {
             //-64 to remove media player bar
             if (System.IO.File.Exists(mplayer.URL))
@@ -443,7 +502,7 @@ namespace videoTracker
                         transpImage.Location = pt;
                         transpImage.Size = mplayer.Size;
                         transpImage.SetBits(nb);
-                        displayMap = true;
+                        displayMap = 1;
                     }
                     else MsgBoxTrack.Show("        Create or Load a Track     ", "Warning Message", "OK");
                 }
@@ -583,7 +642,6 @@ namespace videoTracker
             // copy modified bytes back
             Marshal.Copy(pixels, 0, ptrFirstPixel, pixels.Length);
             processedBitmap.UnlockBits(bitmapData);
-            //points.drawTracjetory(processedBitmap, 0.00007);
         }
 
 
@@ -671,9 +729,9 @@ namespace videoTracker
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void animate_track_Click(object sender, EventArgs e)
         {
-
+            btClean.Enabled = true;
             //Bitmap nb = new Bitmap(mplayer.Width - (int)(bw * 2), mplayer.Height - (int)(bh * 2) - 64);
 
             //drawHeatMap(nb, (track)tracksList.Items[tracksList.SelectedIndex]);
@@ -711,16 +769,26 @@ namespace videoTracker
                             {
                                 timedPoints.dataList.Add(points.dataList[i]);
                             }
-                            for (int i = 5; i < points.dataList.Count; i += 6)
+                            int faster = (int)(speed.Value);
+                            
+                            
+                            for (int i = 5; i < points.dataList.Count; i++)
                             {
-                                g.Clear(Color.Transparent);
                                 timedPoints.dataList.Add(points.dataList[i]);
+                                
+                                if ((i % faster) != 0)
+                                {
+                                    continue;
+                                }
+                                g.Clear(Color.Transparent);
                                 timedPoints.drawTracjetory(nb, 0.00007);
                                 //g.Clear(Color.Black);
 
                                 int min = (int)(points.dataList[i].timeStamp / 60);
                                 int sec = (int)points.dataList[i].timeStamp % 60;
-                                g.DrawString("T: " + min.ToString("D2") + ":" + sec.ToString("D2"), new Font("Arial", 14), Brushes.White, nb.Width * 0.45f, nb.Height * 0.95f);
+
+                                int high = Math.Max(mplayer.Width/50,14);
+                                g.DrawString("T: " + min.ToString("D2") + ":" + sec.ToString("D2"), new Font("Arial", high), Brushes.White, nb.Width * 0.45f, nb.Height - high - 10);
 
 
                                 //transp form setup
@@ -733,8 +801,8 @@ namespace videoTracker
                                 transpImage.Location = pt;
                                 transpImage.Size = mplayer.Size;
                                 transpImage.SetBits(nb);
-                                displayMap = true;
-                                System.Threading.Thread.Sleep((int)speed.Value);
+                                displayMap = 2;
+                                //System.Threading.Thread.Sleep(1000 /faster );
                             }
                             // }
                             //  else MessageBox.Show("Play the video at least one time before animate");
@@ -749,18 +817,15 @@ namespace videoTracker
             else MsgBoxVideo.Show("Please, Load a Video Using 'z'", "Warning Message", "OK");
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-
-        }
 
         private void tracksList_SelectedIndexChanged(object sender, EventArgs e)
         {
             mplayer.Focus();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void animate_all_click(object sender, EventArgs e)
         {
+            btClean.Enabled = true; 
             Bitmap nb = new Bitmap(mplayer.Width - (int)(bw * 2), mplayer.Height - (int)(bh * 2) - 64);
 
             //drawHeatMap(nb, (track)tracksList.Items[tracksList.SelectedIndex]);
@@ -817,7 +882,11 @@ namespace videoTracker
 
                 int min = (int)(time / 60);
                 int sec = ((int)time) % 60;
-                g.DrawString("T: " + min.ToString("D2") + ":" + sec.ToString("D2"), new Font("Arial", 14), Brushes.White, nb.Width * 0.45f, nb.Height * 0.95f);
+                int high = Math.Max(mplayer.Width / 50, 14);
+                g.DrawString("T: " + min.ToString("D2") + ":" + sec.ToString("D2"), new Font("Arial", high), Brushes.White, nb.Width * 0.45f, nb.Height - high -10 );
+
+
+                //g.DrawString("T: " + min.ToString("D2") + ":" + sec.ToString("D2"), new Font("Arial", 14), Brushes.White, nb.Width * 0.45f, nb.Height * 0.95f);
                 //transp form setup
                 Rectangle screenRectangle = RectangleToScreen(this.ClientRectangle);
 
@@ -828,7 +897,7 @@ namespace videoTracker
                 transpImage.Location = pt;
                 transpImage.Size = mplayer.Size;
                 transpImage.SetBits(nb);
-                displayMap = true;
+                displayMap = 3;
                 System.Threading.Thread.Sleep((int)speed.Value);
             }
         }
@@ -836,7 +905,7 @@ namespace videoTracker
         private void button6_Click(object sender, EventArgs e)
         {
             btClean.Enabled = false;
-            Bitmap nb = new Bitmap(mplayer.Width - (int)(bw * 2), mplayer.Height - (int)(bh * 2) - 64);
+            Bitmap nb = new Bitmap(1,1);
 
             //drawHeatMap(nb, (track)tracksList.Items[tracksList.SelectedIndex]);
 
@@ -851,7 +920,7 @@ namespace videoTracker
             transpImage.Location = pt;
             transpImage.Size = mplayer.Size;
             transpImage.SetBits(nb);
-            displayMap = true;
+            displayMap = 0;
 
         }
 
@@ -871,7 +940,7 @@ namespace videoTracker
 
         }
 
-        private void button9_Click(object sender, EventArgs e)
+        private void track_Click(object sender, EventArgs e)
         {
             //-64 to remove media player bar
             if (System.IO.File.Exists(mplayer.URL))
@@ -895,7 +964,7 @@ namespace videoTracker
                         transpImage.Location = pt;
                         transpImage.Size = mplayer.Size;
                         transpImage.SetBits(nb);
-                        displayMap = true;
+                        displayMap = 2;
                     }
                     else MsgBoxTrack.Show("        Create or Load a Track     ", "Warning Message", "OK");
                 }
@@ -908,25 +977,6 @@ namespace videoTracker
         private void Form1_ResizeEnd(object sender, EventArgs e)
         {
 
-            if (displayMap)
-            {
-                getConversion();
-                //-64 to remove control bar
-                Bitmap nb = new Bitmap(mplayer.Width - (int)(bw * 2), mplayer.Height - (int)(bh * 2) - 64);
-                drawHeatMap(nb, (track)tracksList.Items[tracksList.SelectedIndex]);
-
-
-                //transp form setup
-                Rectangle screenRectangle = RectangleToScreen(this.ClientRectangle);
-
-                int titleHeight = screenRectangle.Top - this.Top;
-                //sum 8 I simply dont know why, but it works
-                Point pt = new Point(this.Location.X + mplayer.Location.X + (int)bw + 8, this.Location.Y + mplayer.Location.Y + titleHeight + (int)bh);
-
-                transpImage.Location = pt;
-                transpImage.Size = mplayer.Size;
-                transpImage.SetBits(nb);
-            }
         }
 
         private void blLoadVideo_Click(object sender, EventArgs e)
@@ -947,6 +997,27 @@ namespace videoTracker
         private void videoTimer_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form1_Deactivate(object sender, EventArgs e)
+        {
+            btClean.Enabled = false;
+            Bitmap nb = new Bitmap(1,1);
+
+            //drawHeatMap(nb, (track)tracksList.Items[tracksList.SelectedIndex]);
+
+            Graphics g = Graphics.FromImage(nb);
+            g.Clear(Color.Transparent);
+            Rectangle screenRectangle = RectangleToScreen(this.ClientRectangle);
+
+            int titleHeight = screenRectangle.Top - this.Top;
+            //sum 8 I simply dont know why, but it works
+            Point pt = new Point(this.Location.X + mplayer.Location.X + (int)bw + 8, this.Location.Y + mplayer.Location.Y + titleHeight + (int)bh);
+
+            transpImage.Location = pt;
+            transpImage.Size = mplayer.Size;
+            transpImage.SetBits(nb);
+            displayMap = 0;
         }
     }
 }
